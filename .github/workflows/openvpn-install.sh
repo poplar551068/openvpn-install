@@ -22,7 +22,7 @@ fi
 
 if grep -qs "Ubuntu 16.04" /etc/os-release; then
 	echo 'Ubuntu 16.04 is no longer supported in the current version of openvpn-install
-Use an older version if Ubuntu 16.04 support is needed: https://git.io/vpn1604'
+Use an older version if Ubuntu 16.04 support is needed: https://git.io/vpn1604
 	exit
 fi
 
