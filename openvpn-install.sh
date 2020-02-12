@@ -22,7 +22,7 @@ fi
 
 if grep -qs "Ubuntu 16.04" /etc/os-release; then
 	echo 'Ubuntu 16.04 is no longer supported in the current version of openvpn-install
-Use an older version if Ubuntu 16.04 support is needed: https://git.io/vpn1604
+Use an older version if Ubuntu 16.04 support is needed: https://git.io/vpn1604'
 	exit
 fi
 
@@ -226,7 +226,7 @@ else
 		[[ -z "$ip_number" ]] && ip_number="1"
 		ip=$(ip addr | grep inet | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d '/' -f 1 | grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | sed -n "$ip_number"p)
 	fi
-	# If $IP is a private IP address, the server must be behind NAT
+	# If $IP is a private IP address, the server must be behind NAT
 	if echo "$ip" | grep -qE '^(10\.|172\.1[6789]\.|172\.2[0-9]\.|172\.3[01]\.|192\.168)'; then
 		echo
 		echo "This server is behind NAT. What is the public IPv4 address or hostname?"
@@ -459,3 +459,15 @@ verb 3" > /etc/openvpn/server/client-common.txt
 	echo "Your client configuration is available at:" ~/"$client.ovpn"
 	echo "If you want to add more clients, just run this script again!"
 fi
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
